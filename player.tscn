@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://niqng8xbo2w0"]
+[gd_scene load_steps=4 format=3 uid="uid://niqng8xbo2w0"]
+
+[ext_resource type="Texture2D" uid="uid://dmovrmauft313" path="res://Unknown.jpeg" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bn7ojbpq12hw3" path="res://move.gd" id="1_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
+size = Vector2(93, 105)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(41.8125, 47.125)
+scale = Vector2(0.5272347, 0.70101357)
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(41.5, 47.5)
+shape = SubResource("RectangleShape2D_sh265")
+debug_color = Color(0.25797972, 0.5814658, 0.6988691, 0.41960785)
